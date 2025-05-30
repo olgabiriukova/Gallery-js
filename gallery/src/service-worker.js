@@ -1,6 +1,6 @@
 /* eslint-env serviceworker */
 /* eslint-disable no-restricted-globals */
-
+import { precacheAndRoute } from 'workbox-precaching';
 const CACHE_NAME = 'image-gallery-v1';
 const ASSETS_TO_CACHE = [
   '/',
@@ -40,6 +40,9 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
+precacheAndRoute(self.__WB_MANIFEST);
+
 
 // Clean up old caches on activation
 self.addEventListener('activate', (event) => {
