@@ -1,0 +1,13 @@
+.brush-icon {
+  animation: pulseScale 3s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
