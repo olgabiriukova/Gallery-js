@@ -4,11 +4,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 const CACHE_NAME = 'image-gallery-v1';
 const ASSETS_TO_CACHE = [
   '/',
-  '/public/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.ico'
+  '/index.html'
 ];
 
 // Cache assets on service worker install
